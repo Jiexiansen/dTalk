@@ -1,0 +1,116 @@
+/*
+HTML5 Reset Stylesheet
+ */
+abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:0 0}
+:focus{outline:none}
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}
+nav ul,li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+a{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:0 0;text-decoration: none;}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle;}
+input,textarea{border: 0;background: none;outline: none}
+textarea{resize: none;}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li, pre,fieldset, lengend, button, input, textarea,th, td {margin: 0;padding: 0;font-weight: normal;}
+body{ -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased;  font-smoothing: antialiased;}
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+body{line-height:1;    max-width: 640px;min-width: 320px;margin:0 auto;    -webkit-overflow-scrolling: touch; overflow-scrolling: touch;}
+em{font-style: normal;}
+/*自定义字体*/
+@font-face {font-family:"ukijnsq"; src:url('../font/ukijnsq.eot'); src:local('☺'), url('../font/ukijnsq.eot?#iefix') format("embedded-opentype"), url('../font/ukijnsq.woff') format("woff"), url('../font/ukijnsq.ttf') format("truetype"); }
+@font-face {font-family:"ukijnsqb"; src:url('../font/ukijnsqb.eot'); src:local('☺'), url('../font/ukijnsqb.eot?#iefix') format("embedded-opentype"), url('../font/ukijnsqb.woff') format("woff"), url('../font/ukijnsqb.ttf') format("truetype"); }
+@font-face {font-family:"perpeta"; src:url('../font/perpeta.eot'); src:local('☺'), url('../font/perpeta.eot?#iefix') format("embedded-opentype"), url('../font/perpeta.woff') format("woff"), url('../font/perpeta.ttf') format("truetype"); }
+/*@font-face {font-family:"HN_Md"; src:url('../font/HelveticaNeueLTStd-Md.eot'); src:local('☺'), url('../font/HelveticaNeueLTStd-Md.eot?#iefix') format("embedded-opentype"), url('../font/HelveticaNeueLTStd-Md.woff') format("woff"), url('../font/HelveticaNeueLTStd-Md.ttf') format("truetype"); }
+@font-face {font-family:"HN_Bd"; src:url('../font/HelveticaNeueLTStd-Bd.eot'); src:local('☺'), url('../font/HelveticaNeueLTStd-Bd.eot?#iefix') format("embedded-opentype"), url('../font/HelveticaNeueLTStd-Bd.woff') format("woff"), url('../font/HelveticaNeueLTStd-Bd.ttf') format("truetype"); }*/
+/*自定义字体*/
+
+.ukijnsq{font-family: 'ukijnsq'}
+.ukijnsqb{font-family: 'ukijnsqb'}
+/*图标字体文件*/
+@font-face{font-family:iconfont;src:url(../font/iconfont.eot?t=1485099142608);src:url(../font/iconfont.eot?t=1485099142608#iefix) format('embedded-opentype'),url(../font/iconfont.woff?t=1485099142608) format('woff'),url(../font/iconfont.ttf?t=1485099142608) format('truetype'),url(../font/iconfont.svg?t=1485099142608#iconfont) format('svg')}
+@font-face {
+  font-family: 'iconfont';  /* project id 491283 */
+  src: url('//at.alicdn.com/t/font_491283_5uqehh22t7r5dn29.eot');
+  src: url('//at.alicdn.com/t/font_491283_5uqehh22t7r5dn29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_491283_5uqehh22t7r5dn29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_491283_5uqehh22t7r5dn29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_491283_5uqehh22t7r5dn29.svg#iconfont') format('svg');
+}
+.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.icon-back:before{content:"\e678"}
+.icon-about:before{content:"\e669"}
+.icon-yishehi:before{content:"\e66a"}
+.icon-user:before{content:"\e66b"}
+.icon-mall:before{content:"\e66c"}
+.icon-liangti:before{content:"\e66d"}
+.icon-menu:before{content:"\e66e"}
+.icon-shangmen:before{content:"\e66f"}
+.icon-yuyue:before{content:"\e670"}
+.icon-shouhou:before{content:"\e671"}
+.icon-center:before{content:"\e672"}
+.icon-fenxiang:before{content:"\e64f"}
+.icon-index:before{content:"\e674"}
+.icon-zzdz:before{content:"\e675"}
+.icon-dingzhi:before{content:"\e605"}
+.icon-jingxuan:before{content:"\e677"}
+.icon-pang:before{content:"\e679"}
+.icon-yunchen:before{content:"\e67a"}
+.icon-shou:before{content:"\e67b"}
+.icon-yuyue1:before{content:"\e67c"}
+.icon-liuxyan:before{content:"\e67d"}
+.icon-menjing:before{content:"\e67e"}
+.icon-menjing1:before{content:"\e67f"}
+.icon-menjing2:before{content:"\e680"}
+.icon-lingxing:before{content:"\e681"}
+.icon-lingxing1:before{content:"\e682"}
+.icon-xiuzhe:before{content:"\e683"}
+.icon-lingxing2:before{content:"\e684"}
+.icon-xiuzhe1:before{content:"\e685"}
+.icon-lingxing3:before{content:"\e686"}
+.icon-xiuzhe2:before{content:"\e687"}
+.icon-xiabai:before{content:"\e688"}
+.icon-koudai:before{content:"\e689"}
+.icon-koudai1:before{content:"\e68a"}
+.icon-xiuxing:before{content:"\e68b"}
+.icon-xiabai1:before{content:"\e68c"}
+.icon-xiuxing1:before{content:"\e68d"}
+.icon-xiuxing2:before{content:"\e68e"}
+.icon-xiuxing3:before{content:"\e68f"}
+.icon-xiuxing4:before{content:"\e690"}
+.icon-xiuxing5:before{content:"\e691"}
+.icon-xiuxing6:before{content:"\e692"}
+.icon-houbei:before{content:"\e693"}
+.icon-houbei1:before{content:"\e694"}
+.icon-jifen:before{content:"\e695"}
+.icon-wodedingdan:before{content:"\e696"}
+.icon-houbei2:before{content:"\e697"}
+.icon-youhuiquan:before{content:"\e698"}
+.icon-zhuanshushuju:before{content:"\e699"}
+.icon-dingwei:before{content:"\e69a"}
+.icon-wodedingdan1:before{content:"\e69b"}
+.icon-bianji:before{content:"\e69c"}
+.icon-jiahao:before{content:"\e69d"}
+.icon-sanchu:before{content:"\e69e"}
+.icon-dingdanzhuangtai:before{content:"\e69f"}
+.icon-tizhong:before{content:"\e6a0"}
+.icon-shenggao:before{content:"\e6a1"}
+.icon-Helvetica:before { content: "\e6a2"; }
+.icon-Perpetua:before { content: "\e6a3"; }
+.icon-Bookman:before { content: "\e6a4"; }
+.icon-jia:before { content: "\e6a5"; }
+.icon-jian:before { content: "\e6a6"; }
+.icon-jiantou-copy:before { content: "\e655"; }
+.icon-arrow-right:before { content: "\e629"; }
+.icon-arrows-right:before { content: "\e620"; }
+.icon-arrows-left:before { content: "\e6a7"; }
+.icon-wuxing:before { content: "\e62d"; }
+.icon-wuxing1:before { content: "\e6a9"; }
+.icon-3d:before { content: "\e63a"; }
+.icon-shanchu:before { content: "\e607"; }
+.icon-goback:before { content: "\e627"; }
