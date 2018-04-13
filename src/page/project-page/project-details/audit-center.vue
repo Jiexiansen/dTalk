@@ -1,11 +1,12 @@
 <template>
-  <div class="hello">
+  <div class="audit-center">
+    审核中心
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "auditCenter",
   data() {
     return {};
   }
