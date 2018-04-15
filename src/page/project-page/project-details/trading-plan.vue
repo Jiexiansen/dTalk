@@ -51,44 +51,45 @@ export default {
   height: 100%;
   overflow: hidden;
   padding: 20px 0 50px;
-  .detail-title {
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 15px;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-  }
-  .detail-item {
-    overflow: hidden;
-    .detail-item-left {
-      width: 50%;
-      padding-left: 10px;
-      float: left;
-      p {
-        border-bottom: 1px solid lightgray;
-        text-align: left;
-        height: 30px;
-        line-height: 30px;
-        color: #333;
-      }
-    }
-    .detail-item-right {
-      float: right;
-      width: 50%;
-      padding-right: 10px;
-      p {
-        border-bottom: 1px solid lightgray;
-        text-align: right;
-        height: 30px;
-        line-height: 30px;
-      }
-    }
-  }
+  // .detail-title {
+  //   text-align: center;
+  //   font-weight: 500;
+  //   font-size: 16px;
+  //   padding: 15px;
+  //   border-top: 1px solid lightgray;
+  //   border-bottom: 1px solid lightgray;
+  // }
+  // .detail-item {
+  //   overflow: hidden;
+  //   .detail-item-left {
+  //     width: 50%;
+  //     padding-left: 10px;
+  //     float: left;
+  //     p {
+  //       border-bottom: 1px solid lightgray;
+  //       text-align: left;
+  //       height: 30px;
+  //       line-height: 30px;
+  //       color: #333;
+  //     }
+  //   }
+  //   .detail-item-right {
+  //     float: right;
+  //     width: 50%;
+  //     padding-right: 10px;
+  //     p {
+  //       border-bottom: 1px solid lightgray;
+  //       text-align: right;
+  //       height: 30px;
+  //       line-height: 30px;
+  //     }
+  //   }
+  // }
   .content {
     height: 100px;
     line-height: 100px;
     text-align: center;
+    color: red;
   }
 }
 </style>

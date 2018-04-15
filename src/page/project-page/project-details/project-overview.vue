@@ -87,40 +87,40 @@ export default {
 .project-overview {
   height: 100%;
   overflow: hidden;
-  padding: 25px 0 50px;
-  .detail-title {
-    text-align: center;
-    font-weight: 500;
-    padding: 15px;
-    font-size: 16px;
-    border-bottom: 1px solid lightgray;
-  }
-  .detail-item {
-    overflow: hidden;
-    .detail-item-left {
-      width: 50%;
-      float: left;
-      padding-left: 10px;
+  padding: 20px 0 50px;
+  // .detail-title {
+  //   text-align: center;
+  //   font-weight: 500;
+  //   padding: 15px;
+  //   font-size: 16px;
+  //   border-bottom: 1px solid lightgray;
+  // }
+  // .detail-item {
+  //   overflow: hidden;
+  //   .detail-item-left {
+  //     width: 50%;
+  //     float: left;
+  //     padding-left: 10px;
 
-      p {
-        border-bottom: 1px solid lightgray;
-        text-align: left;
-        height: 30px;
-        line-height: 30px;
-        color: #333;
-      }
-    }
-    .detail-item-right {
-      float: right;
-      width: 50%;
-      padding-right: 10px;
-      p {
-        border-bottom: 1px solid lightgray;
-        text-align: right;
-        height: 30px;
-        line-height: 30px;
-      }
-    }
-  }
+  //     p {
+  //       border-bottom: 1px solid lightgray;
+  //       text-align: left;
+  //       height: 30px;
+  //       line-height: 30px;
+  //       color: #333;
+  //     }
+  //   }
+  //   .detail-item-right {
+  //     float: right;
+  //     width: 50%;
+  //     padding-right: 10px;
+  //     p {
+  //       border-bottom: 1px solid lightgray;
+  //       text-align: right;
+  //       height: 30px;
+  //       line-height: 30px;
+  //     }
+  //   }
+  // }
 }
 </style>

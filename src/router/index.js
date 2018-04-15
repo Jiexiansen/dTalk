@@ -12,8 +12,12 @@ import projectOverview from '@/page/project-page/project-details/project-overvie
 import tradingPlan from '@/page/project-page/project-details/trading-plan';
 import auditCenter from '@/page/project-page/project-details/audit-center';
 
+import auditDetail from '@/page/project-page/project-details/audit-detail/audit-detail';
+import auditOpinion from '@/page/project-page/project-details/audit-detail/audit-opinion';
+
 // 会议
 import mettingList from '@/page/metting-page/metting-list'
+import mettingDetail from '@/page/metting-page/metting-detail'
 
 
 Vue.use(Router)
@@ -62,6 +66,21 @@ export default new Router({
                     component: auditCenter
                 }
             ]
+        },
+        {
+            path: '/audit-detail',
+            name: 'audit-detail',
+            component: auditDetail
+        },
+        {
+            path: '/audit-opinion',
+            name: 'audit-opinion',
+            component: auditOpinion
+        },
+        {
+            path: '/metting-detail',
+            name: 'metting-detail',
+            component: mettingDetail
         }
     ]
 })

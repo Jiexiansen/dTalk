@@ -21,7 +21,9 @@
           </router-link>
         </div>
       </div>
-      <router-view/>
+      <!-- <transition name="fade" mode="out"> -->
+      <router-view style="padding: 20px 0 50px; height:100%;" />
+      <!-- </transition> -->
     </div>
   </div>
 </template>
@@ -38,6 +40,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .project-detail {
+  height: 100%;
   header {
     .mui-title {
       font-weight: none;
