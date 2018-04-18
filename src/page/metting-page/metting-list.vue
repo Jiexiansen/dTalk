@@ -2,7 +2,7 @@
   <div class="metting-center">
     <div class="mui-content">
       <div class="mui-card1" style="margin-bottom: 35px;">
-        <div class="tab-bar">
+        <!-- <div class="tab-bar">
           <div class="tab-title">
             <p>
               <span>【项目名称】</span>
@@ -18,7 +18,7 @@
               <span>【会议时间】</span>
             </p>
           </div>
-        </div>
+        </div> -->
         <ul class="mui-table-view">
           <li class="mui-table-view-cell list-cont" v-for="item in mettingListData" :key="item.name" @tap="goDetails(item.name)">
             <div class="list-cont-detail">

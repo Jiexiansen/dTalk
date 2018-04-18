@@ -1,6 +1,5 @@
 <template>
   <div class="trading-plan">
-    <div class="detail-title">交易方案</div>
     <ul class="detail-item">
       <li class="detail-item-left">
         <p>投资金额</p>
@@ -13,34 +12,68 @@
         <p>展望/退出期</p>
       </li>
       <li class="detail-item-right">
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <p>{{tradingData.investSum}}</p>
+        <p>{{tradingData.sumUse}}</p>
+        <p>{{tradingData.investHorizon}}</p>
+        <p>{{tradingData.investStockWay}}</p>
+        <p>{{tradingData.investClaimWay}}</p>
+        <p>{{tradingData.investEarningRate}}</p>
+        <p>{{tradingData.fundScale}}</p>
+        <p>{{tradingData.showExitStage}}</p>
       </li>
     </ul>
     <div class="detail-title">基金结构</div>
-    <div class="content">内容</div>
+    <div class="content detailContent1">
+    </div>
+      <img src="/KindEditorImages/20180326/20180326103709_5516.jpg" alt="">
+    
     <div class="detail-title">基金费用及收益分配方式</div>
-    <div class="content">
+    <div class="content detailContent2">
       内容
     </div>
 
     <div class="detail-title">投资方案</div>
-    <div class="content">内容</div>
+    <div class="content detailContent3">内容</div>
 
   </div>
 </template>
 
 <script>
+import http from "@/api/http";
+import api from "@/api/api";
+import axios from 'axios';
+import $ from 'jquery';
+
 export default {
   name: "tradingPlan",
   data() {
-    return {};
+    return {
+      tradingData: {}
+    };
+  },
+  created(){
+    this.getData();
+  },
+  methods: {
+    getData: async function() {
+      let params = {
+        id: localStorage.getItem('projectId')
+      }
+      console.log(JSON.stringify(params))
+      const callBackData = await http.get(api.getTrabsaction, params);
+      console.log(callBackData);
+      this.tradingData = callBackData.data;
+      // callBackData.data
+      // this.projectData = callBackData.data;
+    }
+  },
+  mounted() {
+    const that = this;
+    setTimeout(function(){
+      document.querySelector('.detailContent1').innerHTML=that.tradingData.fundStructure;
+      document.querySelector('.detailContent2').innerHTML=that.tradingData.fundCostAndAllot;
+      document.querySelector('.detailContent3').innerHTML=that.tradingData.investPlan;
+    },100)
   }
 };
 </script>
@@ -51,45 +84,15 @@ export default {
   height: 100%;
   overflow: hidden;
   padding: 20px 0 50px;
-  // .detail-title {
-  //   text-align: center;
-  //   font-weight: 500;
-  //   font-size: 16px;
-  //   padding: 15px;
-  //   border-top: 1px solid lightgray;
-  //   border-bottom: 1px solid lightgray;
-  // }
-  // .detail-item {
-  //   overflow: hidden;
-  //   .detail-item-left {
-  //     width: 50%;
-  //     padding-left: 10px;
-  //     float: left;
-  //     p {
-  //       border-bottom: 1px solid lightgray;
-  //       text-align: left;
-  //       height: 30px;
-  //       line-height: 30px;
-  //       color: #333;
-  //     }
-  //   }
-  //   .detail-item-right {
-  //     float: right;
-  //     width: 50%;
-  //     padding-right: 10px;
-  //     p {
-  //       border-bottom: 1px solid lightgray;
-  //       text-align: right;
-  //       height: 30px;
-  //       line-height: 30px;
-  //     }
-  //   }
-  // }
   .content {
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    color: red;
+    // height: 100px;
+    line-height: 22px;
+    padding: 10px;
+    // text-align: center;
+    image{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>

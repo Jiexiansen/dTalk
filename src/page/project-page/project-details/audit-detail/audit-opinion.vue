@@ -16,17 +16,17 @@
         </li>
         <li class="detail-item-right">
           <p>申请预审会</p>
-          <p>已通过</p>
+          <p></p>
           <p></p>
           <p></p>
         </li>
       </ul>
       <p class="project-name">审核意见</p>
       <div class="metting-content">
-
+        <textarea rows="3" cols="20" class="audit-texarea">审核意见~~~</textarea>
       </div>
-      <button type="button" class="mui-btn mui-btn-primary btn-submit" @click="handleSubmit">提交</button>
-
+      <button type="button" class="mui-btn mui-btn-primary btn-submit" @click="handleSubmit">通过</button>
+      <button type="button" class="mui-btn mui-btn-danger btn-veto" @click="handleVeto">否决</button>
     </div>
   </div>
 </template>
@@ -39,8 +39,12 @@ export default {
   },
   methods: {
     handleSubmit() {
-      alert("提交");
+      alert("通过");
+    },
+    handleVeto() {
+      alert('否决')
     }
+
   }
 };
 </script>
@@ -49,25 +53,47 @@ export default {
 <style lang="less" scoped>
 .metting-detail {
   height: 100%;
+  padding-bottom: 80px;
+  .mui-content {
+    overflow: hidden;
+  }
   .project-name {
     text-align: center;
     font-size: 18px;
     color: black;
-    padding: 10px 0;
-    border-bottom: 1px solid lightgray;
+    padding: 10px 0 0;
+    // border-bottom: 1px solid lightgray;
   }
   .metting-content {
-    height: 200px;
+    width: 100%;
+    overflow: hidden;
     font-size: 14px;
     color: #333;
     padding-top: 10px;
-    text-indent: 2rem;
     line-height: 20px;
   }
   .btn-submit {
     width: 80%;
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
+  }
+
+  .btn-veto {
+    width: 80%;
+    display: block;
+    margin: 0 auto 30px;
+  }
+ .audit-texarea{
+   border-top: 1px solid lightgray;
+   border-bottom: 1px solid lightgray;
+   border-radius: 0;
+   padding: 10px;
+   min-height: 200px;
+ }
+  .mui-input {
+    height: 100%;
+    line-height: 30px;
+    background: red;
   }
 }
 </style>

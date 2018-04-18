@@ -1,9 +1,8 @@
 <template>
   <div class="metting-detail">
-    bbbb
     <header class="mui-bar mui-bar-nav">
       <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-      <p class="mui-title">测试专用</p>
+      <p class="mui-title">测试专用2</p>
     </header>
     <div class="mui-content">
       <ul class="detail-item">

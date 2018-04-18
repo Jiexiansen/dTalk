@@ -10,7 +10,9 @@ import projectDetail from '@/page/project-page/project-detail';
 
 import projectOverview from '@/page/project-page/project-details/project-overview';
 import tradingPlan from '@/page/project-page/project-details/trading-plan';
-import auditCenter from '@/page/project-page/project-details/audit-center';
+import counterparty from '@/page/project-page/project-details/counterparty';
+// import auditCenter from '@/page/project-page/project-details/audit-center';
+import auditCenter from '@/page/audit-page/audit-center';
 
 import auditDetail from '@/page/project-page/project-details/audit-detail/audit-detail';
 import auditOpinion from '@/page/project-page/project-details/audit-detail/audit-opinion';
@@ -23,13 +25,14 @@ import mettingDetail from '@/page/metting-page/metting-detail'
 Vue.use(Router)
 
 export default new Router({
-    routes: [{
-            path: '/',
-            name: 'Login',
-            component: Login
-        },
+    routes: [
+        // {
+        //     path: '/',
+        //     name: 'Login',
+        //     component: Login
+        // },
         {
-            path: '/home',
+            path: '/',
             name: 'home',
             redirect: '/project-list',
             component: Home,
@@ -42,7 +45,12 @@ export default new Router({
                     path: '/metting-page',
                     name: 'metting-list',
                     component: mettingList
-                }
+                },
+                {
+                    path: '/audit-center',
+                    name: 'audit-center',
+                    component: auditCenter
+                },
             ]
         },
         {
@@ -61,10 +69,15 @@ export default new Router({
                     component: tradingPlan
                 },
                 {
-                    path: '/audit-center',
-                    name: 'audit-center',
-                    component: auditCenter
-                }
+                    path: '/counterparty',
+                    name: 'counterparty',
+                    component: counterparty
+                },
+                // {
+                //     path: '/audit-center',
+                //     name: 'audit-center',
+                //     component: auditCenter
+                // }
             ]
         },
         {

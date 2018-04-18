@@ -7,17 +7,17 @@
     <div class="mui-content">
       <div style="padding: 10px 10px;">
         <div class="mui-segmented-control mui-bar-tab">
-          <router-link :to="{ name: 'project-overview'}" class="tab-bottom-btn mui-active ">
+          <router-link :to="{ name: 'project-overview'}" class="tab-bottom-btn mui-active " :style="{backgroundColor: $route.name=='project-overview' ? btnBgC : '#f7f7f7'}">
             <span class="mui-icon mui-icon-home"></span>
             项目概况
           </router-link>
-          <router-link :to="{ name: 'trading-plan'}" class="tab-bottom-btn">
+          <router-link :to="{ name: 'counterparty'}" class="tab-bottom-btn" :style="{backgroundColor: $route.name=='counterparty' ? btnBgC : '#f7f7f7'}">
+            <span class="mui-icon mui-icon-home"></span>
+            交易对手
+          </router-link>
+          <router-link :to="{ name: 'trading-plan'}" class="tab-bottom-btn" :style="{backgroundColor: $route.name=='trading-plan' ? btnBgC : '#f7f7f7'}">
             <span class="mui-icon mui-icon-home"></span>
             交易方案
-          </router-link>
-          <router-link :to="{ name: 'audit-center'}" class="tab-bottom-btn">
-            <span class="mui-icon mui-icon-home"></span>
-            审核中心
           </router-link>
         </div>
       </div>
@@ -32,7 +32,9 @@
 export default {
   name: "projectDetail",
   data() {
-    return {};
+    return {
+      btnBgC: '#13b0f0'
+    };
   }
 };
 </script>
@@ -49,12 +51,13 @@ export default {
   .mui-bar-tab {
     display: -webkit-flex;
     display: flex;
-    background: rgb(243, 188, 86);
+    background: #f7f7f7;;
     position: fixed;
-    top: 44px;
+    top: 45px;
     border-radius: 0;
     border: 0;
     left: 0;
+    border-bottom: 1px solid lightgray;
     -webkit-justify-content: space-around;
     justify-content: space-around;
     width: 100%;

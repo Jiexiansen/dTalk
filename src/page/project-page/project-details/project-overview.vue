@@ -11,12 +11,13 @@
         <p>项目类型</p>
       </li>
       <li class="detail-item-right">
-        <p>部门</p>
-        <p>项目经理</p>
-        <p>项目经理联系方式</p>
-        <p>提交时间</p>
-        <p>项目阶段</p>
-        <p></p>
+        <!-- <p>{{projectData.project.projDept}}</p> -->
+        <p>{{projectData.project.projOfficer}}</p>
+        <p>{{projectData.project.projOfficer}}</p>
+        <p>{{projectData.project.projOfficer}}</p>
+        <p>{{projectData.project.projCreatDate}}</p>
+        <p>{{projectData.project.projState}}</p>
+        <p>{{projectData.project.projType}}</p>
       </li>
     </ul>
     <div class="detail-title">并购类信息</div>
@@ -33,7 +34,7 @@
         <p>收购意向金</p>
       </li>
       <li class="detail-item-right">
-        <p>部门</p>
+        <p>{{projectData.project.projOfficer}}</p>
         <p>产品人名称</p>
         <p>标的资产名称</p>
         <p>项目现状</p>
@@ -74,10 +75,31 @@
 </template>
 
 <script>
+import http from "@/api/http";
+import api from "@/api/api";
+import axios from 'axios';
+
 export default {
   name: "projectOverview",
   data() {
-    return {};
+    return {
+      projectData: []
+    };
+  },
+  created() {
+    this.getProjectDetailData();
+  },
+  methods: {
+    getProjectDetailData: async function() {
+      let params = {
+        id: localStorage.getItem('projectId')
+      }
+      // console.log(JSON.stringify(params))
+      const callBackData = await http.get(api.getProjectDetail, params);
+      console.log(callBackData.data);
+      // callBackData.data
+      this.projectData = callBackData.data;
+    }
   }
 };
 </script>
@@ -88,39 +110,5 @@ export default {
   height: 100%;
   overflow: hidden;
   padding: 20px 0 50px;
-  // .detail-title {
-  //   text-align: center;
-  //   font-weight: 500;
-  //   padding: 15px;
-  //   font-size: 16px;
-  //   border-bottom: 1px solid lightgray;
-  // }
-  // .detail-item {
-  //   overflow: hidden;
-  //   .detail-item-left {
-  //     width: 50%;
-  //     float: left;
-  //     padding-left: 10px;
-
-  //     p {
-  //       border-bottom: 1px solid lightgray;
-  //       text-align: left;
-  //       height: 30px;
-  //       line-height: 30px;
-  //       color: #333;
-  //     }
-  //   }
-  //   .detail-item-right {
-  //     float: right;
-  //     width: 50%;
-  //     padding-right: 10px;
-  //     p {
-  //       border-bottom: 1px solid lightgray;
-  //       text-align: right;
-  //       height: 30px;
-  //       line-height: 30px;
-  //     }
-  //   }
-  // }
 }
 </style>
